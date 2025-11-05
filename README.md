@@ -1,5 +1,5 @@
 # YOLO Retroreflective Film (RED) Detector
-A single-class detector(RetroreflectiveRED) trained with Ultralytics YOLO for red retroreflective flim.
+A single-class detector(RetroreflectiveRED) trained with Ultralytics YOLO for red retroreflective film.
 We provide YOLOv11m/YOLOv11s weights for production use; YOLOv8m is a baseline (test) model for comparison.
 
 - Small/Long-range targets : try imgsz = 1024~
