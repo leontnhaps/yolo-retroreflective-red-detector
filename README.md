@@ -18,7 +18,7 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 | 모델 타입 | 베스트 모델 | mAP@0.5 | Precision | Recall | 특징 |
 |:---:|:---:|:---:|:---:|:---:|:---|
 | **Original (RGB)** | **YOLOv11m** | **0.935** | 0.98 | 0.81 | 일반 주간/실내 환경 |
-| **Diff (Robust)** | **YOLOv11m_Diff** | *TBD* | *TBD* | *TBD* | **강한 주변광**, 야간, 원거리 |
+| **Diff (Robust)** | **YOLOv11m_Diff** | **0.994** | **0.99** | **0.98** | **강한 주변광**, 야간, 원거리 |
 
 ---
 
@@ -32,7 +32,8 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 <summary><b>▼ Diff 모델 그래프 확인</b></summary>
 
 #### YOLOv11m_Diff (Main)
-> **mAP@50**: *Check Results* | **Best F1**: *Check Results*
+* **mAP@50**: 0.994
+* **Precision**: 0.99 | **Recall**: 0.98
 
 | Precision-Recall | F1-Confidence |
 |:---:|:---:|
@@ -51,9 +52,9 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 *(학습 대기 중)*
 
 #### 상세 지표
-| 모델 | mAP@0.5 | F1-Score | Precision | Recall |
+| 모델 | mAP@0.5 | Precision | Recall | 비고 |
 |:---|:---:|:---:|:---:|:---:|
-| **YOLOv11m_Diff** | **0.9XX** (예상) | **0.9XX** | - | - |
+| **YOLOv11m_Diff** | **0.994** | **0.99** | **0.98** | High Performance |
 | **YOLOv11s_Diff** | - | - | - | - |
 
 </details>
@@ -109,4 +110,8 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 ## 테스트 예시
 <div align="center">
 <img src="test.png" width="60%"/>
+</div>
+
+<div align="center">
+<img src="diff_test.png" width="60%"/>
 </div>
