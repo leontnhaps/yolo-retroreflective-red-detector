@@ -31,14 +31,29 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 <details open>
 <summary><b>▼ Diff 모델 그래프 확인</b></summary>
 
-| **YOLOv11m_Diff (Main)** | **YOLOv11s_Diff (Light)** |
+#### YOLOv11m_Diff (Main)
+> **mAP@50**: *Check Results* | **Best F1**: *Check Results*
+
+| Precision-Recall | F1-Confidence |
 |:---:|:---:|
-| **TBD**<br>*(그래프 추가 예정)* | **TBD**<br>*(그래프 추가 예정)* |
+| <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxPR_curve.png" width="100%"/> | <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxF1_curve.png" width="100%"/> |
+| **Precision-Confidence** | **Recall-Confidence** |
+| <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxP_curve.png" width="100%"/> | <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxR_curve.png" width="100%"/> |
+
+<div align="center">
+    <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/confusion_matrix_normalized.png" width="60%"/>
+    <p>Confusion Matrix (Normalized)</p>
+</div>
+
+<br>
+
+#### YOLOv11s_Diff (Light)
+*(학습 대기 중)*
 
 #### 상세 지표
 | 모델 | mAP@0.5 | F1-Score | Precision | Recall |
 |:---|:---:|:---:|:---:|:---:|
-| **YOLOv11m_Diff** | - | - | - | - |
+| **YOLOv11m_Diff** | **0.9XX** (예상) | **0.9XX** | - | - |
 | **YOLOv11s_Diff** | - | - | - | - |
 
 </details>
