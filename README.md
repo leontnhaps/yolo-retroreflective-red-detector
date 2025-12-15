@@ -1,42 +1,42 @@
-# 🎯 YOLO Retroreflective Film (RED) Detector
+# 🎯 YOLO 재귀반사 필름(적색) 탐지기
 
 <div align="center">
 
 ![YOLOv11](https://img.shields.io/badge/YOLO-v11-blue?style=for-the-badge&logo=ultralytics)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-AGPL%20v3-red?style=for-the-badge)
 
-**High-precision detector for Red Retroreflective Film using Ultralytics YOLO.**  
-Supports both **RGB Original** images and **LED Difference** images for robust detection in various lighting conditions.
+**Ultralytics YOLO를 활용한 고정밀 적색 재귀반사 필름 탐지 모델입니다.**  
+다양한 조명 환경에서도 강인한 탐지를 위해 **RGB 원본(Original) 영상**과 **LED 차분(Diff) 영상** 모델을 모두 지원합니다.
 
 </div>
 
 ---
 
-## 📊 Performance Overview
+## 📊 성능 요약 (Performance Overview)
 
-| Model Type | Best Model | mAP@0.5 | Precision | Recall | Recommended For |
+| 모델 타입 (Model Type) | 베스트 모델 | mAP@0.5 | 정밀도 (Precision) | 재현율 (Recall) | 추천 용도 |
 |:---:|:---:|:---:|:---:|:---:|:---|
-| **Original (RGB)** | **YOLOv11m** | **0.935** | 0.98 | 0.81 | General Purpose, Day/Indoor |
-| **Diff (Robust)** | **YOLOv11m_Diff** | *TBD* | *TBD* | *TBD* | **Strong Ambient Light**, Night, Long Range |
+| **Original (RGB)** | **YOLOv11m** | **0.935** | 0.98 | 0.81 | 일반 환경, 주간/실내 |
+| **Diff (Robust)** | **YOLOv11m_Diff** | *TBD* | *TBD* | *TBD* | **강한 주변광**, 야간, 장거리 |
 
 ---
 
-## 📂 Model Gallery
+## 📂 모델 갤러리
 
-### ✨ Diff Model (Difference Image)
-> **Robustness Choice** 🛡️  
-> Trained on `(LED ON - LED OFF)` difference images. Extremely effective at removing background noise and ambient light interference.
+### ✨ Diff 모델 (차분 영상)
+> **강인한 성능 (Robustness Choice)** 🛡️  
+> `(LED ON - LED OFF)` 차분 영상을 학습했습니다. 배경 노이즈와 주변광 간섭을 제거하는 데 매우 효과적입니다.
 
 <details open>
-<summary><b>🔻 Click to expand Diff Model Graphs</b></summary>
+<summary><b>🔻 클릭하여 Diff 모델 그래프 보기</b></summary>
 
 | **YOLOv11m_Diff (Main)** | **YOLOv11s_Diff (Light)** |
 |:---:|:---:|
-| **TBD**<br>*(Graphs will be added)* | **TBD**<br>*(Graphs will be added)* |
+| **TBD**<br>*(그래프 추가 예정)* | **TBD**<br>*(그래프 추가 예정)* |
 
-#### Performance Table (Diff)
-| Model | mAP@0.5 | F1-Score | Precision | Recall |
+#### 성능표 (Diff)
+| 모델 | mAP@0.5 | F1-Score | Precision | Recall |
 |:---|:---:|:---:|:---:|:---:|
 | **YOLOv11m_Diff** | - | - | - | - |
 | **YOLOv11s_Diff** | - | - | - | - |
@@ -45,12 +45,12 @@ Supports both **RGB Original** images and **LED Difference** images for robust d
 
 <br>
 
-### 🧱 Original Model (RGB Image)
-> **Standard Choice** 📷  
-> Trained on standard RGB images. High accuracy in controlled environments.
+### 🧱 Original 모델 (RGB 영상)
+> **일반적인 선택 (Standard Choice)** 📷  
+> 표준 RGB 영상을 학습했습니다. 통제된 환경에서 높은 정확도를 보여줍니다.
 
 <details>
-<summary><b>🔻 Click to expand Original Model Graphs</b></summary>
+<summary><b>🔻 클릭하여 Original 모델 그래프 보기</b></summary>
 
 #### YOLOv11m (Main)
 > **mAP@0.5**: 0.935 | **Best F1**: 0.91
@@ -88,7 +88,7 @@ Supports both **RGB Original** images and **LED Difference** images for robust d
 
 ---
 
-## 🧪 Test Sample
+## 🧪 테스트 예시
 <div align="center">
 <img src="test.png" width="60%"/>
 </div>
