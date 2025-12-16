@@ -66,6 +66,17 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 * **Precision**: 0.98 | **Recall**: 0.97
 * **특징**: YOLOv11m_Diff를 Teacher로 사용한 지식 증류
 
+| Precision-Recall | F1-Confidence |
+|:---:|:---:|
+| <img src="diff_model/YOLOv11n_Diff_KD/BoxPR_curve.png" width="100%"/> | <img src="diff_model/YOLOv11n_Diff_KD/BoxF1_curve.png" width="100%"/> |
+| **Precision-Confidence** | **Recall-Confidence** |
+| <img src="diff_model/YOLOv11n_Diff_KD/BoxP_curve.png" width="100%"/> | <img src="diff_model/YOLOv11n_Diff_KD/BoxR_curve.png" width="100%"/> |
+
+<div align="center">
+    <img src="diff_model/YOLOv11n_Diff_KD/confusion_matrix_normalized.png" width="60%"/>
+    <p>Confusion Matrix (Normalized)</p>
+</div>
+
 <br>
 
 #### 상세 지표
