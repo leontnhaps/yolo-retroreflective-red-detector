@@ -18,7 +18,8 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 | 모델 타입 | 베스트 모델 | mAP@0.5 | Precision | Recall | 특징 |
 |:---:|:---:|:---:|:---:|:---:|:---|
 | **Original (RGB)** | **YOLOv11m** | **0.935** | 0.98 | 0.81 | 일반 주간/실내 환경 |
-| **Diff (Robust)** | **YOLOv11m_Diff** | **0.994** | **0.99** | **0.98** | **강한 주변광**, 야간, 원거리 |
+| **Diff (Robust)** | **YOLOv11m_Diff** | **0.994** | **0.99** | **0.98** | 강한 주변광, 야간, 원거리 |
+| **Diff (Nano)** | **YOLOv11n_Diff** | **0.991** | **0.98** | **0.97** | 경량화, 엣지 디바이스 |
 
 ---
 
@@ -37,25 +38,42 @@ RGB 원본 영상과 LED 차분(Diff) 영상 모델을 제공합니다.
 
 | Precision-Recall | F1-Confidence |
 |:---:|:---:|
-| <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxPR_curve.png" width="100%"/> | <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxF1_curve.png" width="100%"/> |
+| <img src="diff_model/YOLOv11m_Diff/BoxPR_curve.png" width="100%"/> | <img src="diff_model/YOLOv11m_Diff/BoxF1_curve.png" width="100%"/> |
 | **Precision-Confidence** | **Recall-Confidence** |
-| <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxP_curve.png" width="100%"/> | <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/BoxR_curve.png" width="100%"/> |
+| <img src="diff_model/YOLOv11m_Diff/BoxP_curve.png" width="100%"/> | <img src="diff_model/YOLOv11m_Diff/BoxR_curve.png" width="100%"/> |
 
 <div align="center">
-    <img src="diff_model/YOLOv11m_Diff/reflective_film_model_11m/confusion_matrix_normalized.png" width="60%"/>
+    <img src="diff_model/YOLOv11m_Diff/confusion_matrix_normalized.png" width="60%"/>
     <p>Confusion Matrix (Normalized)</p>
 </div>
 
 <br>
 
-#### YOLOv11s_Diff (Light)
-*(학습 대기 중)*
+#### YOLOv11n_Diff (Nano)
+* **mAP@50**: 0.991
+* **Precision**: 0.98 | **Recall**: 0.97
+
+| Precision-Recall | F1-Confidence |
+|:---:|:---:|
+| <img src="diff_model/YOLOv11n_Diff/BoxPR_curve.png" width="100%"/> | <img src="diff_model/YOLOv11n_Diff/BoxF1_curve.png" width="100%"/> |
+| **Precision-Confidence** | **Recall-Confidence** |
+| <img src="diff_model/YOLOv11n_Diff/BoxP_curve.png" width="100%"/> | <img src="diff_model/YOLOv11n_Diff/BoxR_curve.png" width="100%"/> |
+
+<br>
+
+#### YOLOv11n_Diff_KD (Nano + Knowledge Distillation)
+* **mAP@50**: 0.993
+* **Precision**: 0.98 | **Recall**: 0.97
+* **특징**: YOLOv11m_Diff를 Teacher로 사용한 지식 증류
+
+<br>
 
 #### 상세 지표
 | 모델 | mAP@0.5 | Precision | Recall | 비고 |
 |:---|:---:|:---:|:---:|:---:|
-| **YOLOv11m_Diff** | **0.994** | **0.99** | **0.98** | High Performance |
-| **YOLOv11s_Diff** | - | - | - | - |
+| **YOLOv11m_Diff** | **0.994** | **0.99** | **0.98** | 최고 성능 |
+| **YOLOv11n_Diff** | **0.991** | **0.98** | **0.97** | 경량화 |
+| **YOLOv11n_Diff_KD** | **0.993** | **0.98** | **0.97** | KD 적용 |
 
 </details>
 
